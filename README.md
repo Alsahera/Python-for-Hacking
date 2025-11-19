@@ -23,10 +23,10 @@ Pastikan Anda memiliki file-file berikut di dalam direktori yang sesuai:
 
 | Direktori | File | Deskripsi |
 | :--- | :--- | :--- |
-| `tcp` | `tcpServer.py` | Kode untuk server TCP. |
-| `tcp` | `tcpSocket.py` | Kode untuk klien TCP. |
-| `udp` | `udpServer.py` | Kode untuk server UDP. |
-| `udp` | `udpSocket.py` | Kode untuk klien UDP. |
+| `tcp` | [`tcpServer.py`](./tcp/tcpServer.py) | Berfungsi sebagai server *Echo* berbasis TCP. Server di-*bind* ke alamat *localhost* (`127.0.0.1`) dan *port* `12345`, dan *listening* untuk koneksi masuk. Setelah koneksi *client* diterima, server akan **menerima pesan**, **mengonversinya menjadi huruf kapital (uppercase)**, dan **mengirimkannya kembali** ke klien sebelum menutup koneksi spesifik tersebut. Implementasi ini bersifat *blocking* per koneksi. |
+| `tcp` | [`tcpSocket.py`](./tcp/tcpSocket.py) | Berfungsi sebagai klien TCP. Script membuat koneksi ke server pada *port* `12345`. Klien meminta *input* string dari pengguna melalui konsol (`input()`), mengirimkannya ke server, dan kemudian **mencetak balasan** yang diterima dari server (pesan dalam format *uppercase*) ke layar. |
+| `udp` | [`udpServer.py`](./udp/udpServer.py) | Berfungsi sebagai server UDP tanpa koneksi (*connectionless*). Server di-*bind* ke *port* `9997` dan berjalan dalam *loop* tak terbatas (`while True`) untuk mendengarkan *datagram* yang masuk. Ketika datagram diterima, server **mencetak isi pesan** serta **alamat IP dan port sumber** klien. Server kemudian mengirimkan **balasan statis** (`b"Selamat datang di UDP Server"`) kembali ke alamat sumber tersebut. |
+| `udp` | [`udpSocket.py`](./udp/udpSocket.py) | Berfungsi sebagai klien UDP. Script membuat *socket* UDP, kemudian segera **mengirimkan *datagram* statis** (`b"Hallo"`) ke alamat target `127.0.0.1:9997`. Setelah pengiriman, klien menunggu dan **mencetak balasan** dari server. |
 
 ### 2. Menjalankan TCP
 
