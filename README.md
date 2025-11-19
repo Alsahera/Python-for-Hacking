@@ -81,8 +81,4 @@ Proyek ini menunjukkan perbedaan mendasar antara kedua protokol:
 | **Kecepatan** | Lebih Lambat | Lebih Cepat |
 | **Penggunaan** | *Web Browsing* (HTTP), Transfer File (FTP) | *Streaming* Video/Audio, Permainan Daring, DNS |
 
----
 
-## 🤝 Kontribusi
-
-Selamat datang kontribusi, laporan *bug*, dan saran perbaikan. Silakan buka *issue* atau kirim *pull request*.
